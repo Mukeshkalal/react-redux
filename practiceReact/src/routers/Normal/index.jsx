@@ -1,0 +1,20 @@
+import { Container } from "react-bootstrap";
+import Header from "../../components/Header";
+import About from "../../pages/About"
+import Home from "../../pages/Home"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+function Normal() {
+    return (
+        <BrowserRouter>
+            <Header />
+            <Container>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                </Routes>
+            </Container>
+        </BrowserRouter>
+    )
+}
+
+export default Normal
